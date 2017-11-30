@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {JournalService} from '../../services/journal.service';
 
 @Component({
   selector: 'app-entry-list',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./entry-list.component.css']
 })
 export class EntryListComponent implements OnInit {
+  manu:Array<any> = [];
 
-  constructor() { }
+constructor(public journalService:JournalService) {
+  this.journalService.getJournalList().subscribe( entries =>{
+    this.manu = entries;
+  });
+}
 
   ngOnInit() {
   }

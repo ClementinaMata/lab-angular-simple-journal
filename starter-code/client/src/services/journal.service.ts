@@ -12,7 +12,7 @@ const BASEURL = `${DOMAIN}${PATH}`;
 export class JournalService {
   constructor(private http: Http) {}
 
-  getjournalList():Observable<any>{
+  getJournalList():Observable<any>{
       return this.http.get(BASEURL)
                       .map(res => res.json());
   }
