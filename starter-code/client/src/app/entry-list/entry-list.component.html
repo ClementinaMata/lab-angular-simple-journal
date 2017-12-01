@@ -2,9 +2,10 @@
   entry-list works!
 </p>
 
-<div class="entry-list">
-   <div class="journal-entry" *ngFor="let pepe of journalEntries">
-     <h3>{{ pepe.title }}</h3>
+<div class="entry">
+   <div *ngFor="let pepe of manu" class="journal">
+     <p>{{ pepe.title }}</p>
      <p>{{ pepe.date }}</p>
+     <!-- <a [routerLink]="['journal-entries', entry._id]">View entry details</a> -->
    </div>
  </div>

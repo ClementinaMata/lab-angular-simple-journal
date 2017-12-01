@@ -5,7 +5,7 @@ import {Observable} from 'rxjs';
 import 'rxjs/add/operator/map';
 
 const DOMAIN = "http://localhost:3000";
-const PATH = "/api/journal";
+const PATH = "/api/journal-entries";
 const BASEURL = `${DOMAIN}${PATH}`;
 
 @Injectable()
@@ -17,5 +17,9 @@ export class JournalService {
                       .map(res => res.json());
   }
 
+  getSingleEntry(id):Observable<any> {
+       return this.http.get(`${BASEURL}/${id}`)
+                       .map(res => res.json());
+     }
 
 }
