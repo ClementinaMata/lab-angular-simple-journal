@@ -6,6 +6,8 @@
    <div *ngFor="let pepe of manu" class="journal">
      <p>{{ pepe.title }}</p>
      <p>{{ pepe.date }}</p>
-     <!-- <a [routerLink]="['journal-entries', entry._id]">View entry details</a> -->
+     <a [routerLink]="['journal-entries', pepe._id]">View entry details</a>
+
    </div>
+
  </div>

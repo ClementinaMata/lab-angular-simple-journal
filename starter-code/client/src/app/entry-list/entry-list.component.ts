@@ -10,8 +10,8 @@ export class EntryListComponent implements OnInit {
   manu:Array<any> = [];
 
 constructor(public journalService:JournalService) {
-  this.journalService.getJournalList().subscribe( entries =>{
-    this.manu = entries;
+  this.journalService.getJournalList().subscribe( list =>{
+    this.manu = list;
   });
 }
 
